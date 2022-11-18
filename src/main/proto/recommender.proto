@@ -1,0 +1,21 @@
+syntax = "proto3";
+package recommender ;
+import "common.proto";
+
+option java_package = "com.proto.movieController";
+option java_multiple_files = true;
+
+message RecommenderRequest {
+  string userid = 1 ;
+  common.Movie movie  = 2;
+}
+
+message RecommenderResponse{
+  common.Movie movie = 1;
+}
+
+service RecommenderService {
+
+  //client request the list of movies and get recommended one
+  rpc getRecommendedMovie (stream RecommenderRequest) returns (RecommenderResponse){};
+}

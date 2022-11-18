@@ -1,0 +1,20 @@
+//syntax = "proto3";
+//
+//option java_multiple_files = true;
+//option java_package = "Backend";
+//option java_outer_classname = "Backend";
+//option objc_class_prefix = "HLW";
+//
+//package Backend;
+//
+//service BackendService {
+//  rpc send (BackendRequest) returns (BackendReply) {}
+//}
+//
+//message BackendRequest {
+//  string name = 1;
+//}
+//
+//message BackendReply {
+//  string message = 1;
+//}
